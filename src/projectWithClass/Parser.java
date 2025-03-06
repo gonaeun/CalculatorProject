@@ -14,10 +14,10 @@ public class Parser {
         while (true) {
             try {
                 System.out.println(message);
-                return sc.nextInt();
+                return sc.nextInt(); // 숫자가 아닌 값 입력시 예외 발생함
             } catch (InputMismatchException e) {
                 System.out.println("오류 : 숫자를 입력해주세요");
-                sc.nextLine();
+                sc.nextLine(); // 잘못된 입력을 버리고 다시 입력 받도록...
             }
         }
     }
