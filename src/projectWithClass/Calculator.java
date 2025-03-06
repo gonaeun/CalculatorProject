@@ -44,4 +44,15 @@ public class Calculator {
         return results;
     }
 
+    public void removeResult() {
+        if (!results.isEmpty()) {  // 저장된 결과가 있을 경우
+            results.remove(0); // 리스트에서 첫번째 결과 제거 = 가장 오래된 결과 삭제
+            // System.out.println("현재 남아 있는 결과 개수: " + results.size()); // 디버깅 : 제거 후 리스트가 비어있는지 확인
+            if (results.isEmpty()) { // 삭제 후, 리스트가 비어있으면
+                System.out.println("오류: 저장된 연산 결과가 없습니다."); // 이러한 메세지가 뜰거임
+            }
+        } else { // 저장된 결과가 없으면
+            System.out.println("오류 : 저장된 연산 결과가 없습니다.");  // 이러한 메세지가 뜰거임
+        }
+    }
 }

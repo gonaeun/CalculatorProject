@@ -17,13 +17,15 @@ public class App {
                 System.out.println("결과: " + result);
             }
 
-            System.out.println("계속 계산하시겠습니까? exit 입력시 종료됩니다.");
+            System.out.println("계속 계산하시겠습니까? exit 입력시 종료되고, remove 입력시 첫번째 결과가 삭제됩니다.");
             parser.getNextLine();  // 버퍼 비우기 // parser.sc.nextLine(); 이라고 직접 호출하지 않고 getNextLine 메서드 사용
             String input = parser.getNextLine();
 
             if (input.equalsIgnoreCase("exit")) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
+            } else if (input.equalsIgnoreCase("remove")) {
+                calculator.removeResult();
             }
         }
     }
