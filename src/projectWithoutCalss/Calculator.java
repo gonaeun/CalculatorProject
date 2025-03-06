@@ -1,4 +1,4 @@
-package Project;
+package projectWithoutCalss;
 
 import java.util.Scanner;
 
